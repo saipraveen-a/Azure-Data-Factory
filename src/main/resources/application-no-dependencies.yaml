@@ -1,0 +1,45 @@
+spring:
+  healthcheck:
+    datastore.enabled: false
+
+debug: true
+
+server:
+  port: 8080
+
+appengine:
+  project: mock_project
+  module: mock_module
+  version: 1.0
+app:
+  host: http://localhost:${server.port}
+
+web.security.transportGuarantee: NONE
+
+threadPool:
+  corePoolSize: 1
+  maxPoolSize: 2
+  queueCapacity: 10
+
+azure:
+  datafactory:
+    subscriptionId: <subscription-id>
+    tenantId: <tenant-id>
+    clientId: <client-id>
+    clientSecret: <client-secret>
+    name: <datafactory-name>
+    resourceGroup: <azure-resource-group-name>
+    baseUrl: https://management.azure.com/subscriptions/<subscriptionId>/resourceGroups/<azure-resource-group
+    -name>/providers
+    /Microsoft.DataFactory/factories/<datafactory-name>
+    authorizationUrl: https://login.microsoftonline.com/<tenant-id>/oauth2/token
+    apiVersion: 2018-06-01
+    resource: https://management.azure.com
+    pipelineNamePrefix: pipeline-name
+    projectId: <gcp-project-id>
+    bigquery:
+      defaultProjectId: <gcp-project-id>
+      authenticationType: UserAuthentication
+      clientId: <gcp-client-id>
+      clientSecret: <gcp-client-secret>
+      refreshToken: <gcp-refresh-token>

@@ -1,0 +1,27 @@
+# Azure Datafactory
+
+This is a library on top of Microsoft's Data Factory Rest API.
+
+# Dependencies
+
+Java JDK 8 or above
+
+### Run Check
+
+This step is to make sure the cloned project is passing the check rules (Style & tests)
+
+Run `./gradlew clean check`
+  
+# Building
+
+Simply run: `./gradlew clean build`
+
+# Installation
+
+Add this to your dependencies:
+
+```
+compile 'com.azure:azure-datafactory:<latest version>'
+```
+
+# Usage
