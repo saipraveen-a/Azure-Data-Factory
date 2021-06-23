@@ -1,6 +1,6 @@
 # Azure Datafactory
 
-This is a library on top of Microsoft's Data Factory Rest API.
+This is a library on top of Azure Data Factory Rest API.
 
 # Dependencies
 
